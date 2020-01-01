@@ -1,4 +1,4 @@
-package com.wangbin.variable
+package com.wangbin.second_variable
 
 /*****************字符串的定义******************/
 def name = 'a \'single\' string'

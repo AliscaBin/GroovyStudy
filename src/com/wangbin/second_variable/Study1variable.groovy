@@ -1,4 +1,4 @@
-package com.wangbin.variable
+package com.wangbin.second_variable
 
 int x = 10
 println x.class  //class java.lang.Integer

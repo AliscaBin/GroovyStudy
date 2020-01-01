@@ -1,4 +1,4 @@
-package com.wangbin.objectorention
+package com.wangbin.third_objectorention
 
 trait DefaultAction {
     abstract void eat()

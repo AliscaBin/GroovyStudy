@@ -1,4 +1,4 @@
-package com.wangbin.objectorention.demo
+package com.wangbin.third_objectorention.demo
 
 /**
  * 用户管理类

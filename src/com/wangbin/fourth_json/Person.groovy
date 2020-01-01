@@ -1,4 +1,4 @@
-package com.wangbin.objectorention.demo
+package com.wangbin.fourth_json
 
 class Person {
     String name

@@ -1,4 +1,4 @@
-package com.wangbin.variable
+package com.wangbin.second_variable
 
 //public interface Range<T extends Comparable> extends List<T>
 def range = 1..10

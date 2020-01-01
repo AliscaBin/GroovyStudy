@@ -1,4 +1,4 @@
-package com.wangbin.variable
+package com.wangbin.second_variable
 
 def x = 1.23
 def result

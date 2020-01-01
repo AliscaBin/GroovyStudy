@@ -1,4 +1,4 @@
-package com.wangbin.objectorention.demo
+package com.wangbin.third_objectorention.demo
 
 class Entry {
     static void main(def args) {

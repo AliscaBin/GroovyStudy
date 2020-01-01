@@ -1,4 +1,4 @@
-package com.wangbin.variable
+package com.wangbin.second_variable
 
 def closer = {println 'hello groovy'}
 //closer.call()

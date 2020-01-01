@@ -1,7 +1,4 @@
-package com.wangbin.objectorention
-
-import com.wangbin.variable.Person
-
+package com.wangbin.third_objectorention
 /**
  * groovy中默认都是public
  */
