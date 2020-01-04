@@ -1,7 +1,8 @@
 package com.wangbin.sixth_IO
 
+
 //创建文件流
-def file = new File('../../../../groovydemo.iml')
+def file = new File('../../../../.gitignore')
 //输出文件内容
 //file.eachLine {line ->
 //    println line
@@ -49,7 +50,64 @@ def copy(String sourcePath, String destationPath) {
     }
 }
 
-def copyFlag = copy("../../../../groovydemo.iml","../../../../test_copy.txt")
-println copyFlag
+//def copyFlag = copy("../../../../groovydemo.iml","../../../../test_copy.txt")
+//println copyFlag
 
+def saveObject(Object obj, String path) {
+    try {
+        //创建目标文件对象
+        def desFile = new File(path)
+        if (!desFile.exists()) {
+            desFile.createNewFile()
+        }
+        desFile.withObjectOutputStream {out ->
+            out.writeObject(obj)
+        }
+        return true
+    } catch (Exception ex) {
+        ex.printStackTrace()
+    }
+}
 
+def readObject(String path) {
+    def obj = null
+    try {
+        def file = new File(path)
+        if (file == null || !file.exists()) {
+            println '文件不存在或为空'
+            return null
+        }
+        file.withObjectInputStream {input ->
+            obj = input.readObject()
+        }
+    } catch (Exception ex) {
+        ex.printStackTrace()
+    }
+    return obj
+}
+
+class Person implements Serializable{
+    String name
+    int age
+}
+
+def person = new Person(name: 'wangbin',age: 18)
+//保存对象到文件
+//saveObject(person,'./person.bin')
+//读取对象到内存
+def person1 = (Person)readObject('./person.bin')
+//println person1
+
+//def file = new File(baseDir, 'test.txt')
+//Person p = new Person(name:'Bob', age:76)
+//// 序列化对象到文件
+//file.withObjectOutputStream { out ->
+//    out.writeObject(p)
+//}
+//// ...
+//// 从文件读取数据进行反序列化
+//file.withObjectInputStream { input ->
+//    def p2 = input.readObject()
+//    assert p2.name == p.name
+//    assert p2.age == p.age
+//}
